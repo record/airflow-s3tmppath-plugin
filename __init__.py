@@ -6,7 +6,7 @@ def tmp_path(ti, prefix=None):
     if prefix is None:
         prefix = Variable.get('tmp_path')
 
-    key = '{}/{}/{:%Y%d%m%H%M%S}'.format(prefix,
+    key = '{}/{}/{:%Y%m%d%H%M%S}'.format(prefix,
                                          ti.dag_id,
                                          ti.execution_date)
     return key
